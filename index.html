@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI for Good: Cross-Sector Analysis - Evidence Action</title>
+    <title>AI for Good Project - Evidence Action</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -68,6 +68,8 @@
             border-radius: 12px;
             padding: 1.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
         }
 
         .toc h2 {
@@ -125,6 +127,12 @@
             font-size: 1.4rem;
             color: var(--primary-navy);
             margin: 2rem 0 1rem 0;
+        }
+
+        .section h4 {
+            font-size: 1.1rem;
+            color: var(--primary-teal);
+            margin: 1.5rem 0 0.8rem 0;
         }
 
         .section p {
@@ -212,6 +220,30 @@
             color: white;
         }
 
+        .advisor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .advisor-card {
+            background: var(--lighter-cyan);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-magenta);
+        }
+
+        .advisor-card h4 {
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .advisor-card p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
         @media (max-width: 968px) {
             .container {
                 grid-template-columns: 1fr;
@@ -220,6 +252,7 @@
             .toc {
                 position: relative;
                 top: 0;
+                max-height: none;
             }
 
             .header h1 {
@@ -228,6 +261,10 @@
 
             .content {
                 padding: 1.5rem;
+            }
+
+            .advisor-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -245,6 +282,10 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
+        a:has(.sector-card) {
+            display: block;
+        }
+
         .sector-card h4 {
             color: var(--primary-teal);
             margin-bottom: 0.5rem;
@@ -253,67 +294,294 @@
         strong {
             color: var(--primary-navy);
         }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--blue) 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>AI for Good: Cross-Sector Analysis</h1>
-        <p>Identifying evidence-backed interventions with potential to reach tens of millions of people</p>
+        <h1>AI for Good Project</h1>
+        <p>Ensuring the meaningful benefits of AI reach the 3.5 billion people living in poverty globally</p>
     </div>
 
     <div class="container">
         <nav class="toc">
             <h2>Table of Contents</h2>
             <ul>
+                <li><a href="#about">About the Project</a></li>
+                <li><a href="#context">Context</a></li>
+                <li><a href="#need">The Need</a></li>
+                <li><a href="#big-bets">Big Bets</a></li>
+                <li><a href="#vision">Our Vision</a></li>
+                <li><a href="#team">Our Team</a></li>
                 <li><a href="#executive-summary">Executive Summary</a></li>
-                <li><a href="#agriculture">Downstream Agriculture</a></li>
-                <li><a href="#health">Downstream Health</a></li>
+                <li><a href="#agriculture">Agriculture & Climate</a></li>
+                <li><a href="#health">Health</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#agriculture-rd">Agriculture R&D</a></li>
-                <li><a href="#health-rd">Global Health R&D</a></li>
+                <li><a href="#health-rd">Health R&D</a></li>
                 <li><a href="#humanitarian">Humanitarian Response</a></li>
                 <li><a href="#measurement">Measurement & Evaluation</a></li>
                 <li><a href="#hypotheses">Cross-Sector Hypotheses</a></li>
+                <li><a href="#criteria">Evaluation Criteria</a></li>
             </ul>
         </nav>
 
         <main class="content">
-            <section id="executive-summary" class="section">
-                <h2>Executive Summary</h2>
+            <section id="about" class="section">
+                <h2>About the AI for Good Project</h2>
+                <p><em>Incubated at Evidence Action</em></p>
+                
+                <h3>Summary</h3>
+                <p>We're at an inflection point in artificial intelligence – presenting both tremendous potential opportunity and risk for people in developing countries. Rather than allowing the poverty gap to expand, poor countries have an opportunity to leapfrog development milestones with AI-powered innovations.</p>
+
+                <p>Recognizing the rapid pace of innovation on AI models, we're launching an organization to ensure the meaningful benefits of AI reach the 3.5 billion people living in poverty globally.</p>
+
+                <div class="advisor-grid">
+                    <div class="advisor-card">
+                        <h4>Michael Kremer</h4>
+                        <p>Nobel Laureate</p>
+                    </div>
+                    <div class="advisor-card">
+                        <h4>Dario Amodei</h4>
+                        <p>CEO of Anthropic</p>
+                    </div>
+                    <div class="advisor-card">
+                        <h4>Kent Walker</h4>
+                        <p>President, Global Affairs for Alphabet and Google</p>
+                    </div>
+                </div>
+
+                <p>Our goal is to build an AI-native organization capable of scaling big bets with the potential to reach tens or hundreds of millions of individuals living in poverty. Led by Kanika Bahl, CEO of Evidence Action and founding member of Anthropic's Long Term Benefit Trust, our team is uniquely well-positioned to play this role.</p>
+            </section>
+
+            <section id="context" class="section">
+                <h2>Context</h2>
                 
                 <div class="highlight-box">
                     <p><strong>We're at an inflection point in global development and AI – the next two years may have an outsized effect on the next century of impact.</strong></p>
                 </div>
 
-                <p>Today's AI applications predominantly focus on advanced economies. Access and applications in LMICs have been largely neglected. Exciting work is happening to develop LMIC-focused interventions, but it's often in pilot stage and more resources are needed to bring this work to scale.</p>
+                <h3>The Current Landscape</h3>
+                <ul>
+                    <li><strong>Today's AI applications predominantly focus on the developed world.</strong> Access and applications in the developing world have been largely neglected - only a small set of actors are driving forward action, little funding has been allocated, and more nuanced pilots are often small-scale and bespoke.</li>
+                    <li><strong>AI models are rapidly progressing.</strong> Dario Amodei predicts AI models may surpass human capabilities "in almost everything" within 2-3 years, while McKinsey has reported its potential to unlock trillions of dollars in value.</li>
+                    <li><strong>Recent cuts of $60 billion in US foreign aid</strong> have created a significant unmet gap. USAID's closure is estimated to lead to 14 million deaths by 2030, alongside increases in infectious disease burdens, disability, severe malnutrition, pandemic risks, and lost human capital.</li>
+                </ul>
 
-                <p>Leveraging AI, low & middle-income countries could "leapfrog" traditional stages of development and drive massive efficiencies. Mobile money in Kenya demonstrates this power: M-Pesa leveraged high mobile phone penetration to offer a new model for banking access, increasing financial inclusion for 30M+ people. Today, 80% of Kenyans use mobile money.</p>
+                <h3>The Opportunity and Risk</h3>
+                <p><strong>Leveraging AI, low and middle-income countries could "leapfrog" traditional stages of development.</strong> Mobile money in Kenya demonstrates this power: M-Pesa leveraged high mobile phone penetration to provide a new model for banking access, increasing financial inclusion for tens of millions of people. Today, 80% of Kenyans use mobile money.</p>
 
-                <h3>Key Opportunity Areas</h3>
+                <p><strong>Conversely, without active support, developing economies may lag further.</strong> Government preparation is weak - South and Central Asia and sub-Saharan Africa recently ranked last in a government AI readiness index. Talent, compute access, high-quality datasets, and data centers are all concentrated in high-income countries.</p>
 
-                <div class="sector-card">
-                    <h4>🌾 Downstream Agriculture</h4>
-                    <p><strong>The problem:</strong> There are 475 million small-scale farmers globally, 64% of whom live on less than $1500 annually. These farmers face increasingly complex decisions amid climate variability.</p>
-                    <p><strong>AI opportunity:</strong> AI tools can help farmers increase crop yields, generating billions of dollars of income. AI improves weather forecasting accuracy and reduces costs compared to traditional extension programs.</p>
+                <h3>Historical Precedents</h3>
+                <p>History shows that without a clear driver and coordinated action, complex innovations in the developing world risk languishing or taking decades to drive uptake. However, there are successful examples:</p>
+
+                <ul>
+                    <li><strong>GAVI's Advanced Market Commitments</strong> drove widespread adoption of the pneumococcal vaccine an estimated decade earlier than would have occurred otherwise.</li>
+                    <li><strong>The Green Revolution</strong> funded by Ford and Rockefeller Foundations drove dramatic reductions in poverty and infant mortality through introducing new farming technologies.</li>
+                </ul>
+            </section>
+
+            <section id="need" class="section">
+                <h2>The Need</h2>
+                
+                <p><strong>We urgently need a new model for launching AI-enabled, evidence-based development interventions – deployed at national scale.</strong></p>
+
+                <ul>
+                    <li><strong>Many non-profits and developing-world governments aren't resourced</strong> to fully capture this opportunity. While NGOs recognize AI's promise, many lack the technical resources to operationalize AI at national scale.</li>
+                    <li><strong>Some interventions will require new regulatory or policy frameworks</strong> to enable national-scale change in education and healthcare.</li>
+                    <li><strong>Meaningful, catalytic investment is needed.</strong> Today, over half of grants for AI and social impact efforts are less than $250,000, and many philanthropies don't yet account for AI in their strategic priorities.</li>
+                    <li><strong>We need a cross-sectoral team</strong> to ensure end-to-end efforts from upstream challenges to last-mile delivery become a reality.</li>
+                </ul>
+            </section>
+
+            <section id="big-bets" class="section">
+                <h2>Big Bets</h2>
+                
+                <p>To maximize the likelihood of this upside case - we must identify, prioritize, and act on big bets now.</p>
+
+                <p>We have evaluated approximately 30 high-potential interventions against their scale, evidence base, cost-effectiveness, tractability, and where AI is a key unlock. The highest priority interventions are moving forward in a rigorous vetting process.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Direct implementation is crucial</strong> to building in-depth knowledge on the barriers, opportunities, risks, and unknowns in AI in LMICs. This expertise will directly inform our broader ecosystem-building agenda.</p>
+                    <p><strong>We are operating against a two-year timeline</strong> to drive meaningful change. We aim to launch at least one at-scale intervention by the end of the two years.</p>
                 </div>
 
-                <div class="sector-card">
-                    <h4>🏥 Downstream Health</h4>
-                    <p><strong>The problem:</strong> Over half the global population is not fully covered by essential health services, and 60% of deaths in LMICs from conditions requiring health care occur due to poor quality care.</p>
-                    <p><strong>AI opportunity:</strong> AI can meaningfully increase healthcare treatment standards by improving diagnostics & treatment quality and democratizing access to care.</p>
+                <div class="case-study">
+                    <h4>Case Study: Delivering AI-enabled forecasts to smallholder farmers</h4>
+                    <p>There are over 475 million small-scale farmers globally. AI can generate more accurate, scalable forecasts across multiple variables and lead times. Delivering tailored forecasts can have transformative economic impacts:</p>
+                    <ul>
+                        <li>Farmers in Benin and Colombia saw $100-350/year in financial benefit via SMS forecasts</li>
+                        <li>Indian farmers gained approximately $334 million through improved seasonal rainfall forecasts</li>
+                        <li>Forecasts can be delivered for pennies per farmer via SMS ($0.00019 in India, $0.03 in Ethiopia)</li>
+                    </ul>
+                    <p><strong>Theory of change:</strong> Reliable, timely, and accurate AI forecasts improve downstream decision-making by personalizing recommendations, improving trust, enabling two-way communication, and improving public decision making.</p>
                 </div>
 
-                <div class="sector-card">
-                    <h4>📚 Education</h4>
-                    <p><strong>The problem:</strong> 617M students fail to meet minimum proficiency levels in reading & math, and teachers are stretched thin with large classes and limited training.</p>
-                    <p><strong>AI opportunity:</strong> AI could reduce educational attainment gaps by cost-effectively scaling evidence-backed tactics including personalized learning and frequent feedback.</p>
+                <h3>Other Potential Big Bets</h3>
+
+                <a href="#big-bets" style="text-decoration: none; color: inherit;">
+                    <div class="sector-card">
+                        <h4>AI in Education →</h4>
+                        <p>AI could shrink the gap between students in developed and developing economies. In India, targeted instruction yielded up to 4 additional learning-adjusted years of schooling for just $100/student. New AI-based solutions like Rori have shown improvements equivalent to a grade level in student learning outcomes.</p>
+                    </div>
+                </a>
+
+                <a href="#health-rd" style="text-decoration: none; color: inherit;">
+                    <div class="sector-card">
+                        <h4>Upstream Drug Development →</h4>
+                        <p>Creating financial incentives for investment, fast-tracking approvals, and coordinating delivery at scale for therapeutics addressing diseases of poverty - including tuberculosis, universal flu vaccines, Strep A, and congenital syphilis vaccines.</p>
+                    </div>
+                </a>
+
+                <a href="#health" style="text-decoration: none; color: inherit;">
+                    <div class="sector-card">
+                        <h4>AI-Improved Medical Diagnosis →</h4>
+                        <p>The WHO predicts a shortfall of 11 million health workers by 2030. AI-supported medicine could enable high-quality diagnosis at remote clinics or even at home, transforming outcomes for hundreds of millions of people.</p>
+                    </div>
+                </a>
+            </section>
+
+            <section id="vision" class="section">
+                <h2>Our Vision</h2>
+                
+                <p>We're launching an organization to ensure AI's benefits reach many of the 3.5 billion people living in poverty globally.</p>
+
+                <ul>
+                    <li><strong>Our approach will aim to jump progress curves forward in time.</strong> This work will be done at scale - looking to unlock access to AI innovations for a significant portion of people in the developing world in the coming decade.</li>
+                    <li><strong>There is not time to wait.</strong> We are first focusing on scaling one AI-enabled intervention nationally as a proof point of upside impact. In parallel, we will invest in broader ecosystem-building efforts.</li>
+                    <li><strong>This work has many unknowns</strong> - and we expect there may be major changes in scope. We believe it's crucial to have an ambitious north star while recognizing we'll learn and adapt as we go.</li>
+                </ul>
+            </section>
+
+            <section id="team" class="section">
+                <h2>Our Team</h2>
+                
+                <h3>Leadership</h3>
+                <p><strong>Kanika Bahl</strong>, CEO of Evidence Action and a founding member of Anthropic's Long Term Benefit Trust, brings the necessary experience and track record to ensure the full end-to-end impact of interventions is realized.</p>
+
+                <p>Bahl has been recognized by Vox as one of the Top 50 'visionary change agents' shaping the future. She holds an MBA from Stanford Business School and a bachelor's degree in mathematical economics from Rice University.</p>
+
+                <h4>Key Experience Areas:</h4>
+                <ul>
+                    <li><strong>Leading AI labs:</strong> Founding member of Anthropic's Long Term Benefit Trust</li>
+                    <li><strong>National-scale NGO operations:</strong> CEO of Evidence Action, former EVP of CHAI as it scaled from 50 to 700 people</li>
+                    <li><strong>Private/public partnerships:</strong> Built and led the $400 million, 33-country Unitaid program</li>
+                    <li><strong>Last-mile delivery:</strong> Worked with 20+ Asian and African governments; built partnerships scaling safe water nationwide in India and launching the world's largest deworming program (260 million children)</li>
+                    <li><strong>Global coalitions:</strong> Led development of the Global Fund's Market Shaping Strategy</li>
+                    <li><strong>Uptake of new health technologies:</strong> Drove syphilis testing adoption from 7% to 87% in Liberia</li>
+                </ul>
+
+                <h3>Organizational Structure</h3>
+                <p>This work is being incubated as a new project within Evidence Action, a GiveWell-backed NGO founded on the research of Nobel Laureates. Evidence Action reaches 530M+ people with cost-effective, evidence-based programs across 9 countries in Africa and Asia.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="number">530M+</div>
+                        <div class="label">People Reached</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">$23B</div>
+                        <div class="label">Economic Gains</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">15,000+</div>
+                        <div class="label">Lives Saved</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="executive-summary" class="section">
+                <h2>Cross-Sector Analysis: Executive Summary</h2>
+                
+                <div class="highlight-box">
+                    <p><strong>We're at an inflection point in global development and AI – the next two years may have an outsized effect on the next century of impact.</strong></p>
                 </div>
 
-                <div class="sector-card">
-                    <h4>🚨 Humanitarian Response</h4>
-                    <p><strong>The problem:</strong> ~30% of the global population lacks early-warning coverage for severe weather, leading to widespread, preventable loss of life and assets.</p>
-                    <p><strong>AI opportunity:</strong> AI stands to improve speed, accuracy, and scale of humanitarian response through better weather prediction and damage assessments.</p>
-                </div>
+                <p>Today's AI applications predominantly focus on advanced economies. Leveraging AI, low and middle-income countries could "leapfrog" traditional stages of development and drive massive efficiencies.</p>
+
+                <h3>AI Opportunity Areas in LMICs</h3>
+
+                <a href="#agriculture" style="text-decoration: none; color: inherit;">
+                    <div class="sector-card">
+                        <h4>Downstream Agriculture →</h4>
+                        <p><strong>The problem:</strong> 475 million small-scale farmers globally, 64% living on less than $1500 annually, face increasingly complex decisions amid climate variability with limited access to support.</p>
+                        <p><strong>AI opportunity:</strong> Help farmers increase crop yields, generating billions in income. AI improves weather forecasting accuracy and reduces costs compared to traditional extension programs.</p>
+                    </div>
+                </a>
+
+                <a href="#health" style="text-decoration: none; color: inherit;">
+                    <div class="sector-card">
+                        <h4>Downstream Health →</h4>
+                        <p><strong>The problem:</strong> Over half the global population lacks full coverage of essential health services; 60% of deaths in LMICs from treatable conditions occur due to poor quality care.</p>
+                        <p><strong>AI opportunity:</strong> Increase standards of physical and mental health treatment by improving diagnostics and democratizing access to care. High-quality health systems could prevent 2.5M cardiovascular deaths, 900K TB deaths, 1M newborn deaths, and 50% of maternal deaths annually.</p>
+                    </div>
+                </a>
+
+                <a href="#education" style="text-decoration: none; color: inherit;">
+                    <div class="sector-card">
+                        <h4>Education →</h4>
+                        <p><strong>The problem:</strong> 617M students fail to meet minimum proficiency levels in reading and math; 70% of 10-year-olds in LMICs were unable to understand a simple written text in 2022.</p>
+                        <p><strong>AI opportunity:</strong> Reduce educational attainment gaps by cost-effectively scaling evidence-backed tactics including personalized learning, structured lesson plans, and frequent feedback to millions of classrooms.</p>
+                    </div>
+                </a>
+
+                <a href="#humanitarian" style="text-decoration: none; color: inherit;">
+                    <div class="sector-card">
+                        <h4>Humanitarian Response →</h4>
+                        <p><strong>The problem:</strong> Approximately 30% of the global population lacks early-warning coverage for severe weather, leading to preventable loss of life and assets.</p>
+                        <p><strong>AI opportunity:</strong> Improve speed, accuracy, and scale of humanitarian response through better weather prediction, damage assessments, and infrastructure mapping.</p>
+                    </div>
+                </a>
+
+                <h3>High-Readiness Big Bets</h3>
+
+                <p><strong>Downstream Agriculture:</strong></p>
+                <ul>
+                    <li>AI-driven weather forecasting tailored to smallholder farmers</li>
+                    <li>AI-created agricultural advice using LLMs to synthesize datasets</li>
+                </ul>
+
+                <p><strong>Downstream Health:</strong></p>
+                <ul>
+                    <li>AI diagnosis of medical images (e.g., chest X-rays for TB)</li>
+                    <li>Rules-based chatbots delivering evidence-backed mental health interventions</li>
+                </ul>
+
+                <p><strong>Education:</strong></p>
+                <ul>
+                    <li>AI 1:1 tutoring (RCTs show 1-2 years of schooling gains in months of use)</li>
+                </ul>
+
+                <p><strong>Humanitarian Response:</strong></p>
+                <ul>
+                    <li>AI weather forecasts for early-warning systems ($800M investment could avoid $3-16BN in annual losses)</li>
+                </ul>
             </section>
 
             <section id="agriculture" class="section">
@@ -329,22 +597,22 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Weather forecasting for smallholder farmers</strong></td>
-                            <td>Predict & communicate weather events with greater accuracy, precision, & speed</td>
+                            <td><strong>Weather forecasting</strong></td>
+                            <td>Predict and communicate weather events with greater accuracy, precision, and speed</td>
                             <td><span class="badge badge-high">High</span></td>
                         </tr>
                         <tr>
-                            <td><strong>AI for farming advisory</strong></td>
+                            <td><strong>Farming advisory</strong></td>
                             <td>Offer precise farming advice for pest/disease management, yield estimates, irrigation</td>
                             <td><span class="badge badge-high">High</span></td>
                         </tr>
                         <tr>
-                            <td><strong>AI for agriculture insurance</strong></td>
+                            <td><strong>Agriculture insurance</strong></td>
                             <td>Help farmers access highly accurate, low-cost insurance products</td>
                             <td><span class="badge badge-medium">Medium</span></td>
                         </tr>
                         <tr>
-                            <td><strong>AI to prevent deforestation</strong></td>
+                            <td><strong>Deforestation prevention</strong></td>
                             <td>Monitor forests in real time to detect illegal logging</td>
                             <td><span class="badge badge-low">Low</span></td>
                         </tr>
@@ -352,25 +620,14 @@
                 </table>
 
                 <h3>Key Takeaways</h3>
-
-                <p><strong>Weather forecasting for smallholder farmers appears particularly impactful and tractable,</strong> with potential to be delivered to tens of millions of farmers at extremely low marginal cost:</p>
-
+                <p><strong>Weather forecasting appears particularly impactful and tractable</strong> with potential to be delivered to tens of millions of farmers at extremely low marginal cost:</p>
                 <ul>
-                    <li><strong>Impactful:</strong> AI models provide greater accuracy than traditional regional models, offer more precise forecasts, and unlock new types of predictions</li>
-                    <li><strong>Cost-Effective:</strong> Marginal costs are low (a few cents per SMS message) with high expected benefit ratio</li>
+                    <li><strong>Impactful:</strong> AI models provide greater accuracy than traditional regional models, offer more precise forecasts, and unlock new types like seasonal predictions</li>
+                    <li><strong>Cost-Effective:</strong> Marginal costs are low (a few cents per SMS) with high expected benefit ratio at scale</li>
                     <li><strong>Tractable:</strong> Pilots are already demonstrating early successes</li>
                 </ul>
 
-                <div class="case-study">
-                    <h4>Case Study: AI-Enabled Weather Forecasts for Smallholder Farmers</h4>
-                    <p>Delivering tailored forecasts to smallholder farmers can have transformative economic impacts:</p>
-                    <ul>
-                        <li>Farmers in Benin and Colombia saw $100-350/year in financial benefit via SMS forecasts</li>
-                        <li>Indian farmers gained ~$334m through improved seasonal rainfall forecasts</li>
-                        <li>Forecasts can be delivered for pennies per farmer via SMS ($0.00019 in India, $0.03 in Ethiopia)</li>
-                    </ul>
-                    <p>AI can generate more accurate, scalable forecasts across multiple variables and is cheaper to run than traditional forecasts requiring supercomputing power.</p>
-                </div>
+                <p><strong>We see high potential in layering digital farmer advisory services onto weather forecasting.</strong> Some are tractable near-term (using AI to synthesize agriculture best practices), while others require more investment (irrigation guidance based on soil sensors and satellite imagery).</p>
             </section>
 
             <section id="health" class="section">
@@ -386,23 +643,23 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>AI for frontline healthcare</strong></td>
-                            <td>Clinical decision support or direct-to-patient chatbots for diagnosis and treatment</td>
+                            <td><strong>Frontline healthcare support</strong></td>
+                            <td>Clinical decision support or direct-to-patient chatbots</td>
                             <td><span class="badge badge-medium">Medium</span></td>
                         </tr>
                         <tr>
                             <td><strong>AI-enhanced diagnostics</strong></td>
-                            <td>Medical imaging & lab analysis for disease diagnosis</td>
+                            <td>Medical imaging and lab analysis for disease diagnosis</td>
                             <td><span class="badge badge-high">High</span></td>
                         </tr>
                         <tr>
-                            <td><strong>AI therapists</strong></td>
-                            <td>Conversational therapy sessions using generative AI chatbots</td>
+                            <td><strong>Mental health self-help</strong></td>
+                            <td>Deliver evidence-backed treatments like CBT via chatbots</td>
                             <td><span class="badge badge-medium">Medium</span></td>
                         </tr>
                         <tr>
-                            <td><strong>AI self-help for mental health</strong></td>
-                            <td>Deliver evidence-backed treatments like CBT via chatbots</td>
+                            <td><strong>Electronic Health Records</strong></td>
+                            <td>Digitize existing records and update with clinical information</td>
                             <td><span class="badge badge-medium">Medium</span></td>
                         </tr>
                         <tr>
@@ -414,20 +671,14 @@
                 </table>
 
                 <h3>Key Takeaways</h3>
+                <p><strong>The Problem:</strong> Over 4.5 billion people were not fully covered by essential health services as of 2021. There's an expected global shortfall of 10 million health workers by 2030, predominantly in LMICs.</p>
 
-                <p><strong>The Problem:</strong> People in LMICs face enormous gaps in healthcare access and quality. Over half the global population (about 4.5 billion people) was not fully covered by essential health services as of 2021, and there is expected to be a global shortfall of 10 million health workers by 2030.</p>
-
-                <p><strong>In the near to medium term, high potential areas include:</strong></p>
-
+                <p><strong>High potential areas include:</strong></p>
                 <ul>
-                    <li><strong>AI for TB medical imaging/screening:</strong> Strong evidence supporting accuracy of Computer Aided Detection of chest X-rays for TB. ~3.1M TB cases go undiagnosed annually due to diagnostic gaps</li>
-                    <li><strong>AI for mental health:</strong> Potential for rules-constrained chatbots to help fill massive gaps in mental health services, though fully generative AI therapists remain too risky at this stage</li>
-                    <li><strong>Clinical validation needed:</strong> Most results come from simulations or small pilots. More evidence needed on integration into LMIC clinical settings with limited digital infrastructure</li>
+                    <li><strong>AI for TB medical imaging:</strong> Approximately 10.6M people develop tuberculosis yearly, but approximately 3.1M cases go undiagnosed. Strong evidence supports Computer Aided Detection of chest X-rays for TB.</li>
+                    <li><strong>AI for mental health:</strong> Rules-constrained chatbots show potential to fill massive gaps in mental health services. Fully generative AI therapists remain too risky at this stage.</li>
+                    <li><strong>Models require clinical validation:</strong> Most results come from simulations or small pilots. More evidence needed on integration into LMIC clinical settings with limited digital infrastructure.</li>
                 </ul>
-
-                <div class="highlight-box">
-                    <p><strong>Important:</strong> Models are becoming more capable, but require investments in clinical validation prior to scaling in LMICs. While technology appears promising, more evidence is needed on effective integration into clinical settings with limited digital infrastructure.</p>
-                </div>
             </section>
 
             <section id="education" class="section">
@@ -444,41 +695,36 @@
                     <tbody>
                         <tr>
                             <td><strong>AI 1:1 Tutoring</strong></td>
-                            <td>Personalized learning for students via app or chatbot lessons</td>
+                            <td>Personalized learning via app or chatbot lessons</td>
                             <td><span class="badge badge-high">High</span></td>
                         </tr>
                         <tr>
-                            <td><strong>AI Student Assessment</strong></td>
-                            <td>AI grading & feedback plus data-driven insights for teachers</td>
+                            <td><strong>Student Assessment</strong></td>
+                            <td>AI grading and feedback plus data-driven insights</td>
                             <td><span class="badge badge-medium">Medium</span></td>
                         </tr>
                         <tr>
-                            <td><strong>AI Lesson Planning</strong></td>
-                            <td>Generate curriculum-aligned lesson plans and subject matter guidance</td>
+                            <td><strong>Lesson Planning</strong></td>
+                            <td>Generate curriculum-aligned lesson plans and guidance</td>
                             <td><span class="badge badge-medium">Medium</span></td>
                         </tr>
                         <tr>
-                            <td><strong>AI Teacher Assessment</strong></td>
-                            <td>AI feedback on teachers' performance via video/audio analysis</td>
+                            <td><strong>Teacher Assessment</strong></td>
+                            <td>AI feedback on teacher performance via analysis</td>
                             <td><span class="badge badge-low">Low</span></td>
                         </tr>
                     </tbody>
                 </table>
 
                 <h3>Key Takeaways</h3>
-
-                <p><strong>Education in LMICs faces significant challenges:</strong> 70% of 10-year-olds in LMICs were unable to understand a simple written text in 2022. Teachers face large classes, limited training, and infrastructure gaps.</p>
-
                 <p><strong>RCTs have validated AI education tools:</strong></p>
                 <ul>
-                    <li>AI 1:1 tutoring in Ghana and Nigeria found improvements of 1-2 years of schooling after just a few months of use</li>
-                    <li>RCT in Brazil found AI feedback increased essay scores significantly across 19K students</li>
-                    <li>Sierra Leone study showed frequent system use by teachers</li>
+                    <li>AI 1:1 tutoring in Ghana and Nigeria found improvements of 1-2 years of schooling after a few months</li>
+                    <li>Brazil RCT found AI feedback increased essay scores across 19K students</li>
+                    <li>These ideas face varying tractability levels, requiring widespread smartphone deployment and major changes to classroom operations</li>
                 </ul>
 
-                <div class="highlight-box">
-                    <p><strong>Tractability Considerations:</strong> Successfully scaling requires widespread smartphone/tablet availability, engagement with teacher unions, and consideration of AI-driven labor market shifts on education curricula.</p>
-                </div>
+                <p><strong>AI could scale evidence-backed solutions:</strong> Teaching at the Right Level and Structured Pedagogy programs are resource-intensive but highly effective. AI could scale these components to millions of classrooms at lower cost.</p>
             </section>
 
             <section id="agriculture-rd" class="section">
@@ -500,16 +746,16 @@
                         </tr>
                         <tr>
                             <td><strong>Photosynthesis efficiency</strong></td>
-                            <td>Improve efficiency to increase yields & drought/heat tolerance</td>
+                            <td>Improve efficiency to increase yields and tolerance</td>
                             <td><span class="badge badge-low">Low</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Methane vaccines for cattle</strong></td>
+                            <td><strong>Methane vaccines</strong></td>
                             <td>Reduce methane emissions from cows by up to 90%</td>
                             <td><span class="badge badge-low">Low</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Heat & drought-tolerant seeds</strong></td>
+                            <td><strong>Heat/drought-tolerant seeds</strong></td>
                             <td>Breed seeds that better tolerate environmental stress</td>
                             <td><span class="badge badge-low">Low</span></td>
                         </tr>
@@ -517,53 +763,46 @@
                 </table>
 
                 <h3>Key Takeaways</h3>
+                <p><strong>Major threats necessitate transformational R&D:</strong> By 2050, global food production needs to increase by 26-100%. Climate change threatens crop yields globally, especially for smallholder farmers.</p>
 
-                <p><strong>Major threats necessitate transformational R&D:</strong></p>
-                <ul>
-                    <li>Need to increase global food production by 26-100% by 2050</li>
-                    <li>Climate change threatens crop yields, especially for smallholder farmers</li>
-                    <li>Agriculture generates over 14.5% of global greenhouse gas emissions</li>
-                </ul>
-
-                <p><strong>Tractability barriers make this likely a Low Readiness Big Bet:</strong></p>
+                <p><strong>Tractability barriers make this likely Low Readiness:</strong></p>
                 <ul>
                     <li>Most research is 5-15 years from commercialization</li>
                     <li>Structural barriers: GMO regulations, farmer trust/demand, IP licensing issues</li>
-                    <li>Simpler solutions may be more practical in near term (only 10% of SSA farmers access existing high-quality seeds)</li>
+                    <li>Only 10% of SSA farmers access existing high-quality seeds</li>
                 </ul>
+
+                <p><strong>Coordinating player could:</strong> Fund research portfolio, coordinate IP licensing, establish advanced purchasing commitments, solve farmer uptake barriers, advocate for GMO-friendly regulations.</p>
             </section>
 
             <section id="health-rd" class="section">
                 <h2>Global Health R&D</h2>
 
-                <p><strong>Traditional drug development:</strong> Requires 12-15 years and ~$2.8 billion per approved drug, with only 7.9% clinical trial success rate. Novel therapies for neglected diseases are highly under-invested relative to their impact.</p>
+                <p>Traditional drug development requires 12-15 years and approximately $2.8 billion per approved drug, with only 7.9% clinical trial success rate. Novel therapies for neglected diseases are highly under-invested.</p>
 
-                <h3>AI Transformation Across the R&D Value Chain</h3>
+                <h3>AI Transformation Across Value Chain</h3>
 
                 <div class="sector-card">
-                    <h4>Discovery & Targeting</h4>
-                    <p><span class="badge badge-medium">Medium Readiness</span></p>
-                    <p>AI analyzes biomedical datasets to understand disease biology and identify drug candidates. Drug repurposing holds particular promise. However, applications limited by dataset quality and NTD disease complexity.</p>
+                    <h4>Discovery & Targeting <span class="badge badge-medium">Medium</span></h4>
+                    <p>AI analyzes biomedical datasets to understand disease biology and identify drug candidates. Drug repurposing holds particular promise. Limited by dataset quality and NTD disease complexity.</p>
                 </div>
 
                 <div class="sector-card">
-                    <h4>Preclinical Development</h4>
-                    <p><span class="badge badge-medium">Medium Readiness</span></p>
-                    <p>AI improves in vitro testing accuracy and "virtual patients" have matched/surpassed some animal tests. FDA now encourages AI use as animal testing replacement. Applications still nascent for complex diseases with limited data.</p>
+                    <h4>Preclinical Development <span class="badge badge-medium">Medium</span></h4>
+                    <p>AI improves in vitro testing accuracy. "Virtual patients" and Organs-on-chip systems have matched/surpassed some animal tests. FDA now encourages AI as animal testing replacement. Applications still nascent for complex diseases with limited data.</p>
                 </div>
 
                 <div class="sector-card">
-                    <h4>Clinical Testing Infrastructure</h4>
-                    <p><span class="badge badge-medium">Medium Readiness</span></p>
-                    <p>AI can optimize patient recruitment, create synthetic control arms, and improve protocol design. Most transformative applications face high data barriers in LMICs where datasets are limited.</p>
+                    <h4>Clinical Testing <span class="badge badge-medium">Medium</span></h4>
+                    <p>AI can optimize patient recruitment, create synthetic control arms, improve protocol design. Most transformative applications face high data barriers in LMICs where datasets are limited.</p>
                 </div>
 
                 <h3>Key Questions for Coordinated Action</h3>
                 <ul>
-                    <li>How can coordinated action address data gaps (biobanks, clinical trials data, disease datasets)?</li>
-                    <li>Should we temper expectations given NTD complexity?</li>
+                    <li>Where is coordinated action to address data gaps most feasible (biobanks, clinical trials data, disease datasets)?</li>
+                    <li>Should we temper expectations given NTD complexity (majority are parasitic)?</li>
                     <li>Which actors are best positioned for market-shaping investments?</li>
-                    <li>What role should coordinators play to prioritize diseases of poverty in AI Health R&D?</li>
+                    <li>What roles should coordinators play to prioritize diseases of poverty?</li>
                 </ul>
             </section>
 
@@ -580,35 +819,34 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Early warning weather forecasts</strong></td>
+                            <td><strong>Early warning forecasts</strong></td>
                             <td>Predict natural disasters earlier with greater accuracy</td>
                             <td><span class="badge badge-high">High</span></td>
                         </tr>
                         <tr>
-                            <td><strong>AI maps for response</strong></td>
+                            <td><strong>AI humanitarian maps</strong></td>
                             <td>Damage assessments, infrastructure mapping, hotspot detection</td>
                             <td><span class="badge badge-medium">Medium</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Early warning for conflict</strong></td>
+                            <td><strong>Conflict early warning</strong></td>
                             <td>Predictive modeling of conflicts or displacement risk</td>
                             <td><span class="badge badge-low">Low</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Chatbots for crisis decisions</strong></td>
+                            <td><strong>Crisis chatbots</strong></td>
                             <td>Provide info to impacted people or aid workers</td>
                             <td><span class="badge badge-low">Low</span></td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h3>Early Warning Weather Forecasting - High Readiness Big Bet</h3>
-
-                <p><strong>The Problem:</strong> About 30% of the global population lacks early-warning coverage for severe weather, leading to widespread, preventable loss of life and assets.</p>
+                <h3>Early Warning Weather Forecasting - High Readiness</h3>
+                <p><strong>The Problem:</strong> About 30% of the global population lacks early-warning coverage for severe weather, leading to preventable loss of life and assets.</p>
 
                 <p><strong>AI Benefits:</strong></p>
                 <ul>
-                    <li>Improved accuracy and lead times (e.g., 7 days advance flood warnings vs. 1-2 days traditional)</li>
+                    <li>Improved accuracy and lead times (7 days advance flood warnings vs. 1-2 days traditional)</li>
                     <li>Analyzes wide range of data without highly skilled workforce</li>
                     <li>Reduces false alarms and builds trust in evacuation recommendations</li>
                 </ul>
@@ -617,12 +855,7 @@
                     <p><strong>Impact Potential:</strong> Investing $800M in early warning systems in LMICs would avoid losses of $3-16BN annually.</p>
                 </div>
 
-                <p><strong>Critical Success Factors:</strong></p>
-                <ul>
-                    <li>Convincing users to trust forecasts and take recommended actions</li>
-                    <li>Investment in quality training data for LMIC contexts</li>
-                    <li>Last-mile delivery to ensure warnings reach vulnerable populations</li>
-                </ul>
+                <p><strong>Critical Success Factors:</strong> Convincing users to trust forecasts, investing in quality training data for LMIC contexts, ensuring last-mile delivery reaches vulnerable populations.</p>
             </section>
 
             <section id="measurement" class="section">
@@ -651,50 +884,151 @@
                 </table>
 
                 <h3>Key Takeaways</h3>
+                <p><strong>Problem:</strong> Traditional evaluation in LMICs is expensive and slow, requiring specialists and large teams. Poverty data is often infrequent, outdated, or incomplete.</p>
 
-                <p><strong>Problem:</strong> Traditional program evaluation in LMICs is expensive and slow, requiring specialists and large teams. This delays the ability to identify needs, assess effectiveness, and adapt programs.</p>
+                <p><strong>AI Opportunity:</strong> The end-to-end M&E process appears strong candidate for AI automation. Technology largely exists: LLMs for evaluation design, AI voice agents for data collection in local languages, AI tools for analysis and reporting.</p>
 
-                <p><strong>AI Opportunity for End-to-End M&E:</strong></p>
-                <ul>
-                    <li>LLMs advise on evaluation design</li>
-                    <li>AI voice agents and chatbots collect data through phones in local languages</li>
-                    <li>AI tools clean, analyze, and report findings</li>
-                    <li>Could dramatically lower costs and increase quality of evaluations</li>
-                </ul>
-
-                <p><strong>Considerations:</strong> There's no clear market failure here – private incentives might drive this technology forward. Phone-based data collection using AI is largely untested in high-poverty regions, and many poorest households lack phone access.</p>
+                <p><strong>Considerations:</strong> No clear market failure to address - private incentives might drive technology forward. Phone-based data collection using AI is largely untested in high-poverty regions.</p>
             </section>
 
             <section id="hypotheses" class="section">
                 <h2>Cross-Sector Hypotheses for Next Phase</h2>
 
-                <p>We've identified hypotheses that apply across sectors for further consideration in the next phase of analysis:</p>
-
                 <h3>Product Vision & Roadmap</h3>
                 <ol>
-                    <li><strong>Think big but start small:</strong> Identify biggest overall opportunity areas and build a roadmap that stacks products over time, starting with near-term wins</li>
-                    <li><strong>Prioritize user adoption:</strong> Leading indicators are more immediately measurable than multi-year RCTs, crucial amidst rapid AI change</li>
-                    <li><strong>Balance breadth vs depth:</strong> Consider tradeoffs between maximizing product reach and improving outcomes for smaller user groups</li>
+                    <li><strong>Think big but start small - stacking products over time:</strong> Identify biggest opportunity areas and build roadmaps that stack products, starting with near-term wins to drive early impact and adoption.</li>
+                    <li><strong>Prioritize user adoption and behavior change:</strong> Leading indicators are more immediately measurable than multi-year RCTs. User adoption is key first step to long-term impact.</li>
+                    <li><strong>Tradeoffs between breadth and depth:</strong> Consider tradeoffs between maximizing product reach versus improving outcomes for smaller groups.</li>
                 </ol>
 
                 <h3>Paths to Scale / Demand Drivers</h3>
                 <ol start="4">
-                    <li><strong>Governments as key path:</strong> Focus on tractability concerns and potential upsides to drive demand and scale</li>
-                    <li><strong>Competition from free LLMs:</strong> Alternative demand drivers (institutions, governments) may be more tractable, or partnerships with AI Labs</li>
+                    <li><strong>Governments are key path to national scale:</strong> Focus on tractability concerns and potential upsides to drive demand and scale.</li>
+                    <li><strong>Free LLMs create competition:</strong> Alternative demand drivers (institutions, governments) may be more tractable, or partnerships with AI Labs to deploy on their platforms.</li>
                 </ol>
 
                 <h3>Adapting AI to LMIC Contexts</h3>
                 <ol start="6">
-                    <li><strong>Investments in tailoring:</strong> Gather high-quality local datasets (language, weather, disease data) to train effective models</li>
-                    <li><strong>Benchmarking as models mature:</strong> LMIC implementers need clear ways to judge model accuracy in different contexts</li>
-                    <li><strong>Prerequisites for scale:</strong> Consider whether investments can unlock barriers (hardware, internet access) through mechanisms like advanced market commitments</li>
+                    <li><strong>Investments in tailoring:</strong> Gather high-quality datasets for local languages, weather observations, disease data. AI models are highly sensitive to training data quality.</li>
+                    <li><strong>Benchmark models as they mature:</strong> LMIC implementers need clear ways to judge which models are accurate in what contexts.</li>
+                    <li><strong>Multiple prerequisites needed:</strong> Hardware and internet access. Consider whether investments can unlock barriers at scale through mechanisms like advanced market commitments.</li>
                 </ol>
 
                 <h3>Anticipating Risks & Challenges</h3>
                 <ol start="9">
-                    <li><strong>Responsible AI considerations:</strong> Crucial at intervention level (red teaming, guardrails, human oversight) and systems level (data privacy, algorithmic bias, job loss)</li>
-                    <li><strong>Declining foreign aid environment:</strong> Need to drive efficiencies within systems as traditional funding decreases</li>
+                    <li><strong>Responsible AI considerations crucial:</strong> At intervention level (red teaming, rule-based systems, human oversight) and systems level (data privacy, algorithmic bias, job loss, security).</li>
+                    <li><strong>Declining foreign aid environment:</strong> Need to drive efficiencies within systems as traditional funding decreases.</li>
                 </ol>
+            </section>
+
+            <section id="criteria" class="section">
+                <h2>Appendix: Evaluation Criteria</h2>
+
+                <h3>Step 1: Initial Criteria</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Criteria</th>
+                            <th>Pass</th>
+                            <th>Concerns</th>
+                            <th>No-Go</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Scale</strong></td>
+                            <td>Tens to hundreds of millions addressable population</td>
+                            <td>Wide potential range</td>
+                            <td>Thousands or low millions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Unlock</strong></td>
+                            <td>Clear theory of change for meaningful delta per person OR enormous scale</td>
+                            <td>Theory exists but confidence limited</td>
+                            <td>Small impact per person AND marginal scale impact</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Evidence</strong></td>
+                            <td>Evidence supports proxy alternative; Best: AI much more impactful</td>
+                            <td>Limited but positive evidence</td>
+                            <td>Limited/mixed evidence for proxy</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cost Effectiveness</strong></td>
+                            <td>High impact per $ spent</td>
+                            <td>Clear theory but limited studies</td>
+                            <td>Low expected impact or high investment</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Step 2: Tractability Analysis</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tractability</th>
+                            <th>High Readiness</th>
+                            <th>Medium Readiness</th>
+                            <th>Low Readiness</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Simplicity - Users</strong></td>
+                            <td>Upstream, consolidated adoption</td>
+                            <td>Downstream, many people</td>
+                            <td>Behavior change too complex</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Simplicity - Steps</strong></td>
+                            <td>1 touch or replaces 1 piece</td>
+                            <td>Multiple steps but workable</td>
+                            <td>Behavior change unlikely</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technical - Model</strong></td>
+                            <td>AI can do it or very close</td>
+                            <td>Months/years away</td>
+                            <td>May never be possible</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technical - Data</strong></td>
+                            <td>Dataset accessible and ethical</td>
+                            <td>Challenging but feasible</td>
+                            <td>May not be collectible</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technical - Systems</strong></td>
+                            <td>Accessible tech platforms</td>
+                            <td>Investment needed but feasible</td>
+                            <td>Nearly impossible investment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Operational</strong></td>
+                            <td>Pilots show scalable success</td>
+                            <td>Barriers can be overcome</td>
+                            <td>Barriers likely persist</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Political - Government</strong></td>
+                            <td>Limited barriers, expected interest</td>
+                            <td>Barriers may improve over time</td>
+                            <td>Unlikely to improve</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Political - Society</strong></td>
+                            <td>Unlikely serious externalities</td>
+                            <td>Can be mitigated, upside outweighs</td>
+                            <td>Too large to mitigate</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Error/Risk</strong></td>
+                            <td>Small margin for error</td>
+                            <td>Safeguards can be put in place</td>
+                            <td>Unacceptable margin</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
         </main>
